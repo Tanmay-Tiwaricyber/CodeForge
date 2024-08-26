@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeForge</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>CodeForge<span class="emoji">💻</span></h1>
+        </div>
+    </header>
+    <div class="container">
+        <div class="editor-container">
+            <div class="tabs">
+                <button class="tab-button" data-target="html-tab">
+                    <i class="fas fa-code"></i> HTML
+                </button>
+                <button class="tab-button" data-target="css-tab">
+                    <i class="fas fa-paint-brush"></i> CSS
+                </button>
+                <button class="tab-button" data-target="js-tab">
+                    <i class="fab fa-js"></i> JavaScript
+                </button>
+            </div>
+            <div class="tab-content" id="html-tab">
+                <textarea id="html-code" placeholder="Write HTML code here..."></textarea>
+            </div>
+            <div class="tab-content" id="css-tab">
+                <textarea id="css-code" placeholder="Write CSS code here..."></textarea>
+            </div>
+            <div class="tab-content" id="js-tab">
+                <textarea id="js-code" placeholder="Write JavaScript code here..."></textarea>
+            </div>
+            <div class="action-buttons">
+                <button id="run-web" class="action-btn">
+                    <i class="fas fa-play"></i> Render Web
+                </button>
+                
+            </div>
+        </div>
+        <div id="output"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
