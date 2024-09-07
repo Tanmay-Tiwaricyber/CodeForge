@@ -1,134 +1,133 @@
-/* Reset some default styles */
-body, h1, textarea {
+/* Base Styles */
+body {
+    font-family: 'Fira Code', monospace;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
     background-color: #1e1e1e;
     color: #dcdcdc;
-    line-height: 1.6;
-}
-
-header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px 0;
-    border-bottom: 2px solid #444;
-}
-
-header .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-h1 {
-    font-size: 2em;
-    margin-bottom: 0.5em;
-}
-
-.emoji {
-    font-size: 1.5em;
-}
-
-.editor-container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 20px auto;
-    background: #2b2b2b;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    padding: 20px;
-}
-
-.tabs {
     display: flex;
-    margin-bottom: 20px;
-}
-
-.tab-button {
-    background: #444;
+    flex-direction: column;
+    height: 100vh;
+  }
+  
+  header {
+    background-color: #333;
+    color: #dcdcdc;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border-bottom: 2px solid #444;
+  }
+  
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    overflow-y: auto;
+  }
+  
+  .editor-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #2d2d2d;
+  }
+  
+  .editor-tabs {
+    display: flex;
+    background-color: #333;
+    border-bottom: 1px solid #444;
+  }
+  
+  .tab-button {
+    flex: 1;
+    background-color: #2d2d2d;
     border: none;
-    color: #fff;
-    padding: 10px 20px;
-    margin-right: 5px;
-    border-radius: 5px;
+    border-radius: 8px 8px 0 0;
+    padding: 15px;
     cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-}
-
-.tab-button:hover {
-    background: #555;
-    transform: scale(1.05);
-}
-
-.tab-button:active {
-    background: #666;
-}
-
-.tab-content {
+    transition: background-color 0.3s, color 0.3s;
+    color: #dcdcdc;
+    font-size: 16px;
+  }
+  
+  .tab-button.active {
+    background-color: #007acc;
+    color: #fff;
+  }
+  
+  .tab-button:hover {
+    background-color: #555;
+  }
+  
+  .editor-panels {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .editor-panel {
     display: none;
-}
-
-textarea {
+    padding: 10px;
+  }
+  
+  .editor-panel.active {
+    display: block;
+  }
+  
+  textarea {
     width: 100%;
     height: 300px;
-    padding: 10px;
-    background: #2e2e2e;
-    border: 1px solid #444;
-    color: #fff;
-    border-radius: 5px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 1em;
-    transition: border 0.3s;
-}
-
-textarea:focus {
-    border: 1px solid #777;
-    outline: none;
-}
-
-.action-buttons {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
-
-.action-btn {
-    background: #555;
-    border: none;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-    display: flex;
-    align-items: center;
-}
-
-.action-btn i {
-    margin-right: 8px;
-}
-
-.action-btn:hover {
-    background: #666;
-    transform: scale(1.05);
-}
-
-.action-btn:active {
-    background: #777;
-}
-
-#output {
-    margin: 20px auto;
-    width: 90%;
-    max-width: 1200px;
-    background: #2b2b2b;
     border: 1px solid #444;
     border-radius: 8px;
-    padding: 20px;
-}
+    padding: 10px;
+    background-color: #1e1e1e;
+    color: #dcdcdc;
+    font-size: 14px;
+    resize: none;
+  }
+  
+  .preview-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid #444;
+    border-radius: 8px;
+    background-color: #2d2d2d;
+    padding: 10px;
+  }
+  
+  button {
+    background-color: #007acc;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+  }
+  
+  button:hover {
+    background-color: #005fa3;
+  }
+  
+  iframe {
+    width: 100%;
+    height: 400px;
+    border: 1px solid #444;
+    border-radius: 8px;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #dcdcdc;
+    padding: 10px;
+    text-align: center;
+    border-top: 2px solid #444;
+  }
+  
